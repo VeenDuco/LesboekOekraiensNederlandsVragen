@@ -1,5 +1,5 @@
 ---
-title: "Basis Oekraïense uitdrukkingen en woordenschat"
+title: "Oefen met elke sectie"
 ---
 
 
@@ -155,84 +155,54 @@ createQuiz('quiz3', 'ch02_sec02_mc_questions.json');
 
 
 
-## Alle vragen - Typen
+<!-- ## Alle vragen - Typen -->
 
 
-```{r}
-#| include: false
-#| 
-library(readxl)
-library(writexl)
-library(dplyr)
-library(jsonlite)
-
-# List of input .xlsx files
-input_files <- list.files(path = "./vragenbank", pattern = "^ch02_.*\\.xlsx$",
-                          include.dirs = TRUE, full.names = TRUE)
-
-# Read and combine data from multiple .xlsx files
-combined_data <- lapply(input_files, function(file) {
-  data <- read_excel(file)
-  data <- data %>% select(question, correct_answer)
-}) %>% bind_rows()
-
-# Rename the correct_answer column to answer
-combined_data <- combined_data %>% rename(answer = correct_answer)
-
-# Write the combined data to a new .xlsx file to check easily
-write_xlsx(combined_data, "vragenbank/ch02_combined_questions_answers.xlsx")
-# Write the combined data to a new .json file
-write_questions_json <- function(questions, file_path) {
-  questions_json <- toJSON(questions, pretty = TRUE)
-  write(questions_json, file_path)
-}
-
-write_questions_json(combined_data, "docs/ch02_combined_questions_answers.json")
-```
 
 
-<div>
-  <p id="question"></p>
-  <input type="text" id="answer-input">
-  <button onclick="checkAnswer()">Controleer</button>
-  <p id="result" style="display: none;"></p>
-</div>
 
-<script>
-  let quizData = [];
+<!-- <div> -->
+<!--   <p id="question"></p> -->
+<!--   <input type="text" id="answer-input"> -->
+<!--   <button onclick="checkAnswer()">Controleer</button> -->
+<!--   <p id="result" style="display: none;"></p> -->
+<!-- </div> -->
 
-  function loadQuizData() {
-    fetch('ch02_combined_questions_answers.json')
-      .then(response => response.json())
-      .then(data => {
-        quizData = data;
-        loadQuestion();
-      });
-  }
+<!-- <script> -->
+<!--   let quizData = []; -->
 
-  function loadQuestion() {
-    const randomIndex = Math.floor(Math.random() * quizData.length);
-    const question = quizData[randomIndex].question;
-    const answer = quizData[randomIndex].answer;
-    document.getElementById('question').textContent = question;
-    document.getElementById('answer-input').value = '';
-    document.getElementById('result').style.display = 'none';
-  }
+<!--   function loadQuizData() { -->
+<!--     fetch('ch02_combined_questions_answers.json') -->
+<!--       .then(response => response.json()) -->
+<!--       .then(data => { -->
+<!--         quizData = data; -->
+<!--         loadQuestion(); -->
+<!--       }); -->
+<!--   } -->
 
-  function checkAnswer() {
-    const userInput = document.getElementById("answer-input").value;
-    const currentQuestion = document.getElementById('question').textContent;
-    const correctAnswer = quizData.find(q => q.question === currentQuestion).answer;
-    if (userInput.toLowerCase() === correctAnswer.toLowerCase()) {
-      document.getElementById('result').textContent = 'Correct!';
-      document.getElementById('result').style.color = 'green';
-    } else {
-      document.getElementById('result').textContent = 'Niet correct, het juiste antwoord is ' + correctAnswer + '.';
-      document.getElementById('result').style.color = 'red';
-    }
-    document.getElementById('result').style.display = 'block';
-    setTimeout(loadQuestion, 2000);
-  }
+<!--   function loadQuestion() { -->
+<!--     const randomIndex = Math.floor(Math.random() * quizData.length); -->
+<!--     const question = quizData[randomIndex].question; -->
+<!--     const answer = quizData[randomIndex].answer; -->
+<!--     document.getElementById('question').textContent = question; -->
+<!--     document.getElementById('answer-input').value = ''; -->
+<!--     document.getElementById('result').style.display = 'none'; -->
+<!--   } -->
 
-  loadQuizData();
-</script>
+<!--   function checkAnswer() { -->
+<!--     const userInput = document.getElementById("answer-input").value; -->
+<!--     const currentQuestion = document.getElementById('question').textContent; -->
+<!--     const correctAnswer = quizData.find(q => q.question === currentQuestion).answer; -->
+<!--     if (userInput.toLowerCase() === correctAnswer.toLowerCase()) { -->
+<!--       document.getElementById('result').textContent = 'Correct!'; -->
+<!--       document.getElementById('result').style.color = 'green'; -->
+<!--     } else { -->
+<!--       document.getElementById('result').textContent = 'Niet correct, het juiste antwoord is ' + correctAnswer + '.'; -->
+<!--       document.getElementById('result').style.color = 'red'; -->
+<!--     } -->
+<!--     document.getElementById('result').style.display = 'block'; -->
+<!--     setTimeout(loadQuestion, 2000); -->
+<!--   } -->
+
+<!--   loadQuizData(); -->
+<!-- </script> -->

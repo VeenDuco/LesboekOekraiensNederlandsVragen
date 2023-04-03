@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>About</title>
+<title>Open vragen examen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">About</h1>
+      <h1 class="quarto-secondary-nav-title">Open vragen examen</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -102,7 +102,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch02_input_exam.html" class="sidebar-item-text sidebar-link">Open vragen examen</a>
+  <a href="./ch02_input_exam.html" class="sidebar-item-text sidebar-link active">Open vragen examen</a>
   </div>
 </li>
       </ul>
@@ -134,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">About</h1>
+<h1 class="title d-none d-lg-block">Open vragen examen</h1>
 </div>
 
 
@@ -149,7 +149,116 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>About this site</p>
+<p>Hier word je getoetst op alle vragen van hoofdstuk 2 gemengd. Je krijgt telkens vijf vragen die je kunt beantwoorden en nakijken. Als je er klaar voor bent, kun je doorgaan en vernieuwen om een nieuwe reeks van vijf vragen te krijgen.</p>
+<!-- To get the updated .json file run file 'ch02_gather_questions_input.r' -->
+<!-- Questions and Options -->
+<div id="quiz-container">
+<div id="question1" class="question-container">
+
+</div>
+<hr>
+<div id="question2" class="question-container">
+
+</div>
+<hr>
+<div id="question3" class="question-container">
+
+</div>
+<hr>
+<div id="question4" class="question-container">
+
+</div>
+<hr>
+<div id="question5" class="question-container">
+
+</div>
+<hr>
+</div>
+<!-- Result -->
+<div>
+<p id="total-result" style="display: none;">
+</p>
+</div>
+<!-- Buttons -->
+<div>
+<p><button onclick="checkAnswers()">Check Answers</button> <button onclick="loadQuestions()">Refresh Questions</button></p>
+</div>
+<script>
+  let quizData = [];
+
+  function loadQuizData() {
+    fetch("ch02_combined_questions_answers.json")
+      .then((response) => response.json())
+      .then((data) => {
+        quizData = data;
+        loadQuestions();
+      });
+  }
+
+  function loadQuestion(questionId) {
+    const randomIndex = Math.floor(Math.random() * quizData.length);
+    const question = quizData[randomIndex].question;
+
+    const questionElement = document.getElementById(questionId);
+    questionElement.innerHTML = `<p>${question}</p>`;
+    const inputElement = document.createElement("input");
+    inputElement.type = "text";
+    inputElement.id = `${questionId}-input`;
+
+    questionElement.appendChild(inputElement);
+    questionElement.innerHTML +=
+      '<p class="feedback" style="display: none;"></p>';
+  }
+
+  function loadQuestions() {
+    for (let i = 1; i <= 5; i++) {
+      loadQuestion(`question${i}`);
+    }
+    document.getElementById("total-result").style.display = "none";
+  }
+
+  function checkAnswers() {
+    let correctCount = 0;
+    let totalCount = 0;
+
+    for (let i = 1; i <= 5; i++) {
+      const questionElement = document.getElementById(`question${i}`);
+      const questionText = questionElement.querySelector("p").textContent;
+      const correctAnswers = quizData
+        .find((q) => q.question === questionText)
+        .answer.split(";");
+
+      const userInput = document.getElementById(
+        `question${i}-input`
+      ).value.toLowerCase();
+
+      const isCorrect = correctAnswers.some((answer) =>
+        userInput.trim().includes(answer.toLowerCase().trim())
+      );
+
+      const feedbackElement = questionElement.querySelector(".feedback");
+      if (isCorrect) {
+        feedbackElement.textContent = "Correct!";
+        feedbackElement.style.color = "green";
+        correctCount++;
+      } else {
+        feedbackElement.textContent = `Incorrect! The correct answer is ${correctAnswers[0]}.`;
+
+        feedbackElement.style.color = "red";
+      }
+      totalCount++;
+      feedbackElement.style.display = "block";
+    }
+
+    const totalResultElement = document.getElementById("total-result");
+    totalResultElement.textContent = `You answered ${correctCount} out of ${totalCount} questions correctly.`;
+    totalResultElement.style.display = "block";
+  }
+
+  loadQuizData();
+</script>
+<!-- if you want feedback to show all accepted answers use code below -->
+<!--         feedbackElement.textContent = `Incorrect! The correct answer is ${correctAnswers.join(", ")}.`; -->
 
 
 

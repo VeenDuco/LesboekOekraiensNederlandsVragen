@@ -1,0 +1,202 @@
+[
+  {
+    "question": "Wat betekent \"я\" in het Nederlands?",
+    "options": "ik; jij; hij; zij (vrouwelijk); het",
+    "correct_answer": "ik"
+  },
+  {
+    "question": "Wat betekent \"ти\" in het Nederlands?",
+    "options": "ik; jij; hij; zij (vrouwelijk); het",
+    "correct_answer": "jij"
+  },
+  {
+    "question": "Wat betekent \"він\" in het Nederlands?",
+    "options": "ik; jij; hij; zij (vrouwelijk); het",
+    "correct_answer": "hij"
+  },
+  {
+    "question": "Wat betekent \"вона\" in het Nederlands?",
+    "options": "hij; zij (vrouwelijk); zij (mannelijk); jullie; wij",
+    "correct_answer": "zij (vrouwelijk)"
+  },
+  {
+    "question": "Wat betekent \"воно\" in het Nederlands?",
+    "options": "het; wij; jullie; zij (mannelijk); zij (vrouwelijk)",
+    "correct_answer": "het"
+  },
+  {
+    "question": "Wat betekent \"ik\" in het Oekraïens?",
+    "options": "я; ти; він; вона; воно",
+    "correct_answer": "я"
+  },
+  {
+    "question": "Wat betekent \"jij\" in het Oekraïens?",
+    "options": "я; ти; він; вона; воно",
+    "correct_answer": "ти"
+  },
+  {
+    "question": "Wat betekent \"hij\" in het Oekraïens?",
+    "options": "я; ти; він; вона; воно",
+    "correct_answer": "він"
+  },
+  {
+    "question": "Wat betekent \"zij (vrouwelijk)\" in het Oekraïens?",
+    "options": "вона; вони; він; я; ти",
+    "correct_answer": "вона"
+  },
+  {
+    "question": "Wat betekent \"het\" in het Oekraïens?",
+    "options": "воно; вона; вони; він; я",
+    "correct_answer": "воно"
+  },
+  {
+    "question": "Wat betekent \"wij\" in het Oekraïens?",
+    "options": "ми; ви; вони; він; вона",
+    "correct_answer": "ми"
+  },
+  {
+    "question": "Wat betekent \"jullie\" in het Oekraïens?",
+    "options": "ми; ви; вони; він; вона",
+    "correct_answer": "ви"
+  },
+  {
+    "question": "Wat betekent \"zij (mannelijk)\" in het Oekraïens?",
+    "options": "ми; ви; вони; він; вона",
+    "correct_answer": "вони"
+  },
+  {
+    "question": "Wat betekent \"Hallo\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "Привіт"
+  },
+  {
+    "question": "Wat betekent \"Goedemorgen\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "Добрий ранок"
+  },
+  {
+    "question": "Wat betekent \"Goedemiddag\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "Добрий день"
+  },
+  {
+    "question": "Wat betekent \"Goede avond\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "Добрий вечір"
+  },
+  {
+    "question": "Wat betekent \"Goede nacht\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "Добраніч"
+  },
+  {
+    "question": "Wat betekent \"Tot ziens\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "До побачення"
+  },
+  {
+    "question": "Wat betekent \"Привіт\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Hallo"
+  },
+  {
+    "question": "Wat betekent \"Добрий ранок\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Goedemorgen"
+  },
+  {
+    "question": "Wat betekent \"Добрий день\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Goedemiddag"
+  },
+  {
+    "question": "Wat betekent \"Добрий вечір\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Goede avond"
+  },
+  {
+    "question": "Wat betekent \"Добраніч\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Goede nacht"
+  },
+  {
+    "question": "Wat betekent \"Бувайте\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Tot ziens"
+  },
+  {
+    "question": "Wat betekent \"До побачення\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Tot ziens"
+  },
+  {
+    "question": "Wat betekent \"Будь ласка\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Alstublieft"
+  },
+  {
+    "question": "Wat betekent \"Дякую\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Dank u"
+  },
+  {
+    "question": "Wat betekent \"Вибачте\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Sorry"
+  },
+  {
+    "question": "Wat betekent \"Немає проблем\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Geen probleem"
+  },
+  {
+    "question": "Wat betekent \"Як справи?\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Hoe gaat het?"
+  },
+  {
+    "question": "Wat betekent \"Добре\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Goed"
+  },
+  {
+    "question": "Wat betekent \"Згода\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Akkoord"
+  },
+  {
+    "question": "Wat betekent \"Alstublieft\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Будь ласка"
+  },
+  {
+    "question": "Wat betekent \"Dank u\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Дякую"
+  },
+  {
+    "question": "Wat betekent \"Sorry\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Вибачте"
+  },
+  {
+    "question": "Wat betekent \"Geen probleem\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Немає проблем"
+  },
+  {
+    "question": "Wat betekent \"Hoe gaat het?\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Як справи?"
+  },
+  {
+    "question": "Wat betekent \"Goed\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Добре"
+  },
+  {
+    "question": "Wat betekent \"Akkoord\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Згода"
+  }
+]

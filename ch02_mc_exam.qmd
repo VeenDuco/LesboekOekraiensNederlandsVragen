@@ -1,15 +1,20 @@
 ---
-title: "Multiple Choice exam example"
+title: "Multiple Choice examen"
 ---
 
 
 <!-- Questions and Options -->
 <div id="quiz-container">
   <div id="question1" class="question-container"></div>
+  <hr>
   <div id="question2" class="question-container"></div>
+  <hr>
   <div id="question3" class="question-container"></div>
+  <hr>
   <div id="question4" class="question-container"></div>
+  <hr>
   <div id="question5" class="question-container"></div>
+  <hr>
 </div>
 
 <!-- Buttons -->

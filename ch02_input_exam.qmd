@@ -1,0 +1,111 @@
+---
+title: "Open vragen examen"
+---
+
+Hier word je getoetst op alle vragen van hoofdstuk 2 gemengd. Je krijgt telkens vijf vragen die je kunt beantwoorden en nakijken. Als je er klaar voor bent, kun je doorgaan en vernieuwen om een nieuwe reeks van vijf vragen te krijgen.
+
+<!-- To get the updated .json file run file 'ch02_gather_questions_input.r' -->
+
+
+<!-- Questions and Options -->
+<div id="quiz-container">
+  <div id="question1" class="question-container"></div>
+  <hr> 
+  <div id="question2" class="question-container"></div>
+  <hr> 
+  <div id="question3" class="question-container"></div>
+  <hr> 
+  <div id="question4" class="question-container"></div>
+  <hr> 
+  <div id="question5" class="question-container"></div>
+  <hr> 
+</div>
+
+<!-- Result -->
+<div>
+  <p id="total-result" style="display: none;"></p>
+</div>
+
+<!-- Buttons -->
+<div>
+  <button onclick="checkAnswers()">Check Answers</button>
+  <button onclick="loadQuestions()">Refresh Questions</button>
+</div>
+
+<script>
+  let quizData = [];
+
+  function loadQuizData() {
+    fetch("ch02_combined_questions_answers.json")
+      .then((response) => response.json())
+      .then((data) => {
+        quizData = data;
+        loadQuestions();
+      });
+  }
+
+  function loadQuestion(questionId) {
+    const randomIndex = Math.floor(Math.random() * quizData.length);
+    const question = quizData[randomIndex].question;
+
+    const questionElement = document.getElementById(questionId);
+    questionElement.innerHTML = `<p>${question}</p>`;
+    const inputElement = document.createElement("input");
+    inputElement.type = "text";
+    inputElement.id = `${questionId}-input`;
+
+    questionElement.appendChild(inputElement);
+    questionElement.innerHTML +=
+      '<p class="feedback" style="display: none;"></p>';
+  }
+
+  function loadQuestions() {
+    for (let i = 1; i <= 5; i++) {
+      loadQuestion(`question${i}`);
+    }
+    document.getElementById("total-result").style.display = "none";
+  }
+
+  function checkAnswers() {
+    let correctCount = 0;
+    let totalCount = 0;
+
+    for (let i = 1; i <= 5; i++) {
+      const questionElement = document.getElementById(`question${i}`);
+      const questionText = questionElement.querySelector("p").textContent;
+      const correctAnswers = quizData
+        .find((q) => q.question === questionText)
+        .answer.split(";");
+
+      const userInput = document.getElementById(
+        `question${i}-input`
+      ).value.toLowerCase();
+
+      const isCorrect = correctAnswers.some((answer) =>
+        userInput.trim().includes(answer.toLowerCase().trim())
+      );
+
+      const feedbackElement = questionElement.querySelector(".feedback");
+      if (isCorrect) {
+        feedbackElement.textContent = "Correct!";
+        feedbackElement.style.color = "green";
+        correctCount++;
+      } else {
+        feedbackElement.textContent = `Incorrect! The correct answer is ${correctAnswers[0]}.`;
+
+        feedbackElement.style.color = "red";
+      }
+      totalCount++;
+      feedbackElement.style.display = "block";
+    }
+
+    const totalResultElement = document.getElementById("total-result");
+    totalResultElement.textContent = `You answered ${correctCount} out of ${totalCount} questions correctly.`;
+    totalResultElement.style.display = "block";
+  }
+
+  loadQuizData();
+</script>
+
+<!-- if you want feedback to show all accepted answers use code below -->
+<!--         feedbackElement.textContent = `Incorrect! The correct answer is ${correctAnswers.join(", ")}.`; -->

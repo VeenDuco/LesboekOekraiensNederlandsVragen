@@ -1,0 +1,18 @@
+---
+title: "Oefen met elke sectie"
+---
+
+
+```{r}
+#| include: false
+#| 
+source("read_questions.R")
+
+```
+
+
+<!-- Section Header -->
+
+## Geslacht van zelfstandige naamwoorden
+
+Inhoud volgt

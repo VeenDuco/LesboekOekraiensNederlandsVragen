@@ -7,13 +7,15 @@ website:
     style: "floating"
     search: false
     contents:
-      - section: "Chapter 2"
+      - section: "Basis Oekraïense uitdrukkingen en woordenschat"
         contents:
-          - index.qmd
-          - quiz.qmd
-          - quiz_input.qmd
+          # - index.qmd
           - ch02_mc.qmd
-        
+          - ch02_mc_exam.qmd
+          - ch02_input_exam.qmd
+      - section: "Zelfstandige Naamwoorden"
+        contents:  
+          - ch03_secties.qmd
 format:
   html:
     theme: cosmo

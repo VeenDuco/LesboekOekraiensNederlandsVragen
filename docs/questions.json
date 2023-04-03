@@ -28,5 +28,41 @@
     "question": "Which planet is known as the \"Red Planet\"?",
     "options": "A. Earth; B. Venus; C. Mars; D. Jupiter",
     "correct_answer": "C. Mars"
+  },
+  {
+    "id": 6,
+    "question": "Vraag 6",
+    "options": "a; b; c; d",
+    "correct_answer": "c"
+  },
+  {
+    "id": 7,
+    "question": "Vraag 7",
+    "options": "a; b; c; d",
+    "correct_answer": "d"
+  },
+  {
+    "id": 8,
+    "question": "Vraag 8",
+    "options": "a; b; c; d",
+    "correct_answer": "a"
+  },
+  {
+    "id": 9,
+    "question": "Vraag 9",
+    "options": "a; b; c; d",
+    "correct_answer": "c"
+  },
+  {
+    "id": 10,
+    "question": "Vraag 10",
+    "options": "a; b; c; d",
+    "correct_answer": "a"
+  },
+  {
+    "id": 11,
+    "question": "Vraag 11",
+    "options": "a; b; c; d",
+    "correct_answer": "d"
   }
 ]

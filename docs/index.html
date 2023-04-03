@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Multiple correct inputs</title>
+<title>Introductie</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Multiple correct inputs</h1>
+      <h1 class="quarto-secondary-nav-title">Introductie</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Chapter 2</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Basis Oekraïense uitdrukkingen en woordenschat</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -92,22 +92,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Multiple correct inputs</a>
+  <a href="./ch02_mc.html" class="sidebar-item-text sidebar-link">Oefen met elke sectie</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quiz.html" class="sidebar-item-text sidebar-link">Multiple Choice Quiz</a>
+  <a href="./ch02_mc_exam.html" class="sidebar-item-text sidebar-link">Multiple Choice examen</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quiz_input.html" class="sidebar-item-text sidebar-link">Input Quiz</a>
+  <a href="./ch02_input_exam.html" class="sidebar-item-text sidebar-link">Open vragen examen</a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Zelfstandige Naamwoorden</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch02_mc.html" class="sidebar-item-text sidebar-link">Basis Oekraïense uitdrukkingen en woordenschat</a>
+  <a href="./ch03_secties.html" class="sidebar-item-text sidebar-link">Oefen met elke sectie</a>
   </div>
 </li>
       </ul>
@@ -124,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Multiple correct inputs</h1>
+<h1 class="title d-none d-lg-block">Introductie</h1>
 </div>
 
 
@@ -139,61 +149,14 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<p>Je kan per sectie oefenen of alles van het hele hoofdstuk in een multiple choice of invul examen.</p>
 <!-- https://chat.openai.com/chat/446c03dc-ab44-4c7e-8d23-db3314ebe862 -->
+<!-- https://chat.openai.com/chat/355b010d-82da-4eb7-b10a-f2cf12d52da1 -->
 <!-- Geef mij de input voor een .xlsx bestand met 3 kolommen question, options, correct_answer gebaseerd op de onderstaande input. Stel in de eerste kolom een vraag, geef in de tweede kolom meerdere antwoord opties en selecteer in de derde kolom de juiste optie. -->
 <!-- Stel de vragen in de vorm "Wat betekent [Oekraïens woord] in het Nederlands?" -->
 <!-- Stel de vragen in de vorm "Wat betekend [nederlands woord] in het Oekraïens?" -->
 <!-- negeer van de onderstaande input de kolom uitspraak. -->
 <!-- Stel de vragen 2 kanten op. Daarmee bedoel ik "Wat betekend [nederlands woord] in het Oekraïens?" en "Wat betekent [Oekraïens woord] in het Nederlands?" -->
-<div>
-<p id="question">
-</p>
-<input type="text" id="answer-input"> <button onclick="checkAnswer()">Controleer</button>
-<p id="result" style="display: none;">
-</p>
-</div>
-<script>
-  let quizData = [];
-
-  function loadQuizData() {
-    fetch('questions_and_answers_ch00.json')
-      .then(response => response.json())
-      .then(data => {
-        quizData = data;
-        loadQuestion();
-      });
-  }
-
-  function loadQuestion() {
-    const randomIndex = Math.floor(Math.random() * quizData.length);
-    const question = quizData[randomIndex].question;
-    document.getElementById('question').textContent = question;
-    document.getElementById('answer-input').value = '';
-    document.getElementById('result').style.display = 'none';
-  }
-
-  function checkAnswer() {
-    const userInput = document.getElementById("answer-input").value;
-    const currentQuestion = document.getElementById('question').textContent;
-    const correctAnswers = quizData.find(q => q.question === currentQuestion).answer.split(';');
-
-    const isCorrect = correctAnswers.some(answer => {
-      return userInput.toLowerCase().trim() === answer.toLowerCase().trim();
-    });
-
-    if (isCorrect) {
-      document.getElementById('result').textContent = 'Correct!';
-      document.getElementById('result').style.color = 'green';
-    } else {
-      document.getElementById('result').textContent = 'Niet correct, het juiste antwoord is ' + correctAnswers.join(', ') + '.';
-      document.getElementById('result').style.color = 'red';
-    }
-    document.getElementById('result').style.display = 'block';
-    setTimeout(loadQuestion, 2000);
-  }
-
-  loadQuizData();
-</script>
 
 
 

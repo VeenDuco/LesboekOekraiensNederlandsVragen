@@ -1,5 +1,5 @@
 ---
-title: "Input Quiz"
+title: "Input exam"
 ---
 
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Multiple Choice Quiz</title>
+<title>Multiple Choice exam example</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Multiple Choice Quiz</h1>
+      <h1 class="quarto-secondary-nav-title">Multiple Choice exam example</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -84,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Chapter 2</a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">Basis Oekraïense uitdrukkingen en woordenschat</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -92,22 +92,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Multiple correct inputs</a>
+  <a href="./ch02_mc.html" class="sidebar-item-text sidebar-link">Oefen met elke sectie</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quiz.html" class="sidebar-item-text sidebar-link active">Multiple Choice Quiz</a>
+  <a href="./ch02_mc_exam.html" class="sidebar-item-text sidebar-link">Multiple Choice examen</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./quiz_input.html" class="sidebar-item-text sidebar-link">Input Quiz</a>
+  <a href="./ch02_input_exam.html" class="sidebar-item-text sidebar-link">Open vragen examen</a>
   </div>
 </li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">Zelfstandige Naamwoorden</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ch02_mc.html" class="sidebar-item-text sidebar-link">Basis Oekraïense uitdrukkingen en woordenschat</a>
+  <a href="./ch03_secties.html" class="sidebar-item-text sidebar-link">Oefen met elke sectie</a>
   </div>
 </li>
       </ul>
@@ -124,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Multiple Choice Quiz</h1>
+<h1 class="title d-none d-lg-block">Multiple Choice exam example</h1>
 </div>
 
 
@@ -139,26 +149,37 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div>
-<p id="question">
-</p>
-<div id="options">
+<!-- Questions and Options -->
+<div id="quiz-container">
+<div id="question1" class="question-container">
 
 </div>
-<button onclick="checkAnswer()">Controleer</button>
-<p id="result" style="display: none;">
-</p>
+<div id="question2" class="question-container">
+
+</div>
+<div id="question3" class="question-container">
+
+</div>
+<div id="question4" class="question-container">
+
+</div>
+<div id="question5" class="question-container">
+
+</div>
+</div>
+<!-- Buttons -->
+<div>
+<p><button onclick="checkAnswers()">Check Answers</button> <button onclick="loadQuestions()">Refresh Questions</button></p>
 </div>
 <script>
   let quizData = [];
-  let currentOptions = [];
 
   function loadQuizData() {
-    fetch('questions.json')
-      .then(response => response.json())
-      .then(data => {
+    fetch("ch02_combined_questions_answers_mc.json")
+      .then((response) => response.json())
+      .then((data) => {
         quizData = data;
-        loadQuestion();
+        loadQuestions();
       });
   }
 
@@ -169,61 +190,78 @@ ul.task-list li input[type="checkbox"] {
     }
   }
 
-  function loadQuestion() {
+  function loadQuestion(questionId) {
     const randomIndex = Math.floor(Math.random() * quizData.length);
     const question = quizData[randomIndex].question;
-    const options = quizData[randomIndex].options.split('; ');
+    const options = quizData[randomIndex].options.split("; ");
     shuffleArray(options);
-    currentOptions = options;
-    
-    document.getElementById('question').textContent = question;
-    
-    const optionsDiv = document.getElementById('options');
-    optionsDiv.innerHTML = '';
+
+    const questionElement = document.getElementById(questionId);
+    questionElement.innerHTML = `<p>${question}</p>`;
+    const optionsDiv = document.createElement("div");
 
     options.forEach((option, index) => {
-      const radioButton = document.createElement('input');
-      radioButton.type = 'radio';
-      radioButton.name = 'option';
-      radioButton.id = `option${index}`;
+      const radioButton = document.createElement("input");
+      radioButton.type = "radio";
+      radioButton.name = `${questionId}-option`;
+      radioButton.id = `${questionId}-option${index}`;
       radioButton.value = option;
 
-      const label = document.createElement('label');
-      label.htmlFor = `option${index}`;
+      const label = document.createElement("label");
+      label.htmlFor = `${questionId}-option${index}`;
       label.textContent = option;
 
       optionsDiv.appendChild(radioButton);
       optionsDiv.appendChild(label);
-      optionsDiv.appendChild(document.createElement('br'));
+      optionsDiv.appendChild(document.createElement("br"));
     });
 
-    document.getElementById('result').style.display = 'none';
+    questionElement.appendChild(optionsDiv);
+    questionElement.innerHTML += '<p class="feedback" style="display: none;"></p>';
   }
 
-  function checkAnswer() {
-    const options = document.getElementsByName('option');
-    let selectedOption = null;
-    options.forEach(option => {
-      if (option.checked) {
-        selectedOption = option.value;
-      }
-    });
-
-    const currentQuestion = document.getElementById('question').textContent;
-    const correctAnswer = quizData.find(q => q.question === currentQuestion).correct_answer;
-
-    if (selectedOption && selectedOption.toLowerCase() === correctAnswer.toLowerCase()) {
-      document.getElementById('result').textContent = 'Correct!';
-      document.getElementById('result').style.color = 'green';
-    } else {
-      document.getElementById('result').textContent = 'Niet correct, het juiste antwoord is ' + correctAnswer + '.';
-      document.getElementById('result').style.color = 'red';
+  function loadQuestions() {
+    for (let i = 1; i <= 5; i++) {
+      loadQuestion(`question${i}`);
     }
-    document.getElementById('result').style.display = 'block';
-    setTimeout(loadQuestion, 2000);
   }
 
-  loadQuizData();
+  function checkAnswers() {
+    for (let i = 1; i <= 5; i++) {
+      const questionElement = document.getElementById(`question${i}`);
+      const questionText = questionElement.querySelector("p").textContent;
+      const correctAnswer = quizData.find(
+        (q) => q.question === questionText
+      ).correct_answer;
+
+      const options = questionElement.querySelectorAll(
+        `input[name="question${i}-option"]`
+      );
+      let selectedOption = null;
+      options.forEach((option) => {
+        if (option.checked) {
+          selectedOption = option.value;
+        }
+      });
+
+      const feedbackElement = questionElement.querySelector(".feedback");
+      if (selectedOption) {
+        if (selectedOption.toLowerCase() === correctAnswer.toLowerCase()) {
+          feedbackElement.textContent = "Correct!";
+          feedbackElement.style.color = "green";
+        } else {
+          feedbackElement.textContent = `Incorrect! The correct answer is ${correctAnswer}.`;
+          feedbackElement.style.color = "red";
+        }
+      } else {
+        feedbackElement.textContent = "No option selected. Please choose an answer.";
+        feedbackElement.style.color = "orange";
+}
+feedbackElement.style.display = "block";
+}
+}
+
+loadQuizData();
 </script>
 
 

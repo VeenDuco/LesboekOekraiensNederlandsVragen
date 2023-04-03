@@ -3,6 +3,14 @@ title: "Multiple Choice exam example"
 ---
 
 
+```{r}
+#| include: false
+#| 
+source("read_questions.R")
+questions <- read_questions("vragenbank/questions.xlsx")
+write_questions_json(questions, "docs/questions.json")
+```
+
 <!-- Questions and Options -->
 <div id="quiz-container">
   <div id="question1" class="question-container"></div>
@@ -10,6 +18,11 @@ title: "Multiple Choice exam example"
   <div id="question3" class="question-container"></div>
   <div id="question4" class="question-container"></div>
   <div id="question5" class="question-container"></div>
+</div>
+
+<!-- Result -->
+<div>
+  <p id="result" style="display: none;"></p>
 </div>
 
 <!-- Buttons -->
@@ -22,7 +35,7 @@ title: "Multiple Choice exam example"
   let quizData = [];
 
   function loadQuizData() {
-    fetch("ch02_combined_questions_answers_mc.json")
+    fetch("questions.json")
       .then((response) => response.json())
       .then((data) => {
         quizData = data;
@@ -64,7 +77,6 @@ title: "Multiple Choice exam example"
     });
 
     questionElement.appendChild(optionsDiv);
-    questionElement.innerHTML += '<p class="feedback" style="display: none;"></p>';
   }
 
   function loadQuestions() {
@@ -74,6 +86,9 @@ title: "Multiple Choice exam example"
   }
 
   function checkAnswers() {
+    let correctCount = 0;
+    let totalCount = 0;
+
     for (let i = 1; i <= 5; i++) {
       const questionElement = document.getElementById(`question${i}`);
       const questionText = questionElement.querySelector("p").textContent;
@@ -91,22 +106,18 @@ title: "Multiple Choice exam example"
         }
       });
 
-      const feedbackElement = questionElement.querySelector(".feedback");
       if (selectedOption) {
+        totalCount++;
         if (selectedOption.toLowerCase() === correctAnswer.toLowerCase()) {
-          feedbackElement.textContent = "Correct!";
-          feedbackElement.style.color = "green";
-        } else {
-          feedbackElement.textContent = `Incorrect! The correct answer is ${correctAnswer}.`;
-          feedbackElement.style.color = "red";
+          correctCount++;
         }
-      } else {
-        feedbackElement.textContent = "No option selected. Please choose an answer.";
-        feedbackElement.style.color = "orange";
-}
-feedbackElement.style.display = "block";
-}
-}
+      }
+    }
 
-loadQuizData();
+    const resultElement = document.getElementById("result");
+    resultElement.textContent = `You answered ${correctCount} out of ${totalCount} questions correctly.`;
+    resultElement.style.display = "block";
+  }
+
+  loadQuizData();
 </script>
