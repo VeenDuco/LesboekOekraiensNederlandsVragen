@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "LesboekOekraiensNederlandsVragen"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: quiz.qmd
+        text: Multiple Choice
+      - href: quiz_input.qmd
+        text: Input Quiz
+        
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

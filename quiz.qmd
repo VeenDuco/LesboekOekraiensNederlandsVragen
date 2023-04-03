@@ -1,0 +1,94 @@
+---
+title: "Language Quiz"
+---
+
+
+```{r}
+source("read_questions.R")
+questions <- read_questions("vragenbank/questions.xlsx")
+write_questions_json(questions, "docs/questions.json")
+```
+
+<div>
+  <p id="question"></p>
+  <div id="options"></div>
+  <button onclick="checkAnswer()">Controleer</button>
+  <p id="result" style="display: none;"></p>
+</div>
+
+<script>
+  let quizData = [];
+  let currentOptions = [];
+
+  function loadQuizData() {
+    fetch('questions.json')
+      .then(response => response.json())
+      .then(data => {
+        quizData = data;
+        loadQuestion();
+      });
+  }
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  function loadQuestion() {
+    const randomIndex = Math.floor(Math.random() * quizData.length);
+    const question = quizData[randomIndex].question;
+    const options = quizData[randomIndex].options.split('; ');
+    shuffleArray(options);
+    currentOptions = options;
+    
+    document.getElementById('question').textContent = question;
+    
+    const optionsDiv = document.getElementById('options');
+    optionsDiv.innerHTML = '';
+
+    options.forEach((option, index) => {
+      const radioButton = document.createElement('input');
+      radioButton.type = 'radio';
+      radioButton.name = 'option';
+      radioButton.id = `option${index}`;
+      radioButton.value = option;
+
+      const label = document.createElement('label');
+      label.htmlFor = `option${index}`;
+      label.textContent = option;
+
+      optionsDiv.appendChild(radioButton);
+      optionsDiv.appendChild(label);
+      optionsDiv.appendChild(document.createElement('br'));
+    });
+
+    document.getElementById('result').style.display = 'none';
+  }
+
+  function checkAnswer() {
+    const options = document.getElementsByName('option');
+    let selectedOption = null;
+    options.forEach(option => {
+      if (option.checked) {
+        selectedOption = option.value;
+      }
+    });
+
+    const currentQuestion = document.getElementById('question').textContent;
+    const correctAnswer = quizData.find(q => q.question === currentQuestion).correct_answer;
+
+    if (selectedOption && selectedOption.toLowerCase() === correctAnswer.toLowerCase()) {
+      document.getElementById('result').textContent = 'Correct!';
+      document.getElementById('result').style.color = 'green';
+    } else {
+      document.getElementById('result').textContent = 'Niet correct, het juiste antwoord is ' + correctAnswer + '.';
+      document.getElementById('result').style.color = 'red';
+    }
+    document.getElementById('result').style.display = 'block';
+    setTimeout(loadQuestion, 2000);
+  }
+
+  loadQuizData();
+</script>

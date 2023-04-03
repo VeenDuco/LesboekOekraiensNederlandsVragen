@@ -1,0 +1,56 @@
+---
+title: "Language Quiz Input"
+---
+
+
+```{r}
+source("read_questions.R")
+questions <- read_questions("vragenbank/questions_and_answers_ch2.xlsx")
+write_questions_json(questions, "docs/questions_and_answers_ch2.json")
+```
+
+<div>
+  <p id="question"></p>
+  <input type="text" id="answer-input">
+  <button onclick="checkAnswer()">Controleer</button>
+  <p id="result" style="display: none;"></p>
+</div>
+
+<script>
+  let quizData = [];
+
+  function loadQuizData() {
+    fetch('questions_and_answers_ch2.json')
+      .then(response => response.json())
+      .then(data => {
+        quizData = data;
+        loadQuestion();
+      });
+  }
+
+  function loadQuestion() {
+    const randomIndex = Math.floor(Math.random() * quizData.length);
+    const question = quizData[randomIndex].question;
+    const answer = quizData[randomIndex].answer;
+    document.getElementById('question').textContent = question;
+    document.getElementById('answer-input').value = '';
+    document.getElementById('result').style.display = 'none';
+  }
+
+  function checkAnswer() {
+    const userInput = document.getElementById("answer-input").value;
+    const currentQuestion = document.getElementById('question').textContent;
+    const correctAnswer = quizData.find(q => q.question === currentQuestion).answer;
+    if (userInput.toLowerCase() === correctAnswer.toLowerCase()) {
+      document.getElementById('result').textContent = 'Correct!';
+      document.getElementById('result').style.color = 'green';
+    } else {
+      document.getElementById('result').textContent = 'Niet correct, het juiste antwoord is ' + correctAnswer + '.';
+      document.getElementById('result').style.color = 'red';
+    }
+    document.getElementById('result').style.display = 'block';
+    setTimeout(loadQuestion, 2000);
+  }
+
+  loadQuizData();
+</script>

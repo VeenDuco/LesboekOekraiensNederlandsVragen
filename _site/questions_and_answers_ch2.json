@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "question": "Hoe zeg je 'hallo' in het Oekraïens?",
+    "answer": "Привіт"
+  },
+  {
+    "id": 2,
+    "question": "Hoe zeg je 'tot ziens' in het Oekraïens?",
+    "answer": "До побачення"
+  },
+  {
+    "id": 3,
+    "question": "Hoe zeg je 'alstublieft' in het Oekraïens?",
+    "answer": "Будь ласка"
+  },
+  {
+    "id": 4,
+    "question": "Hoe zeg je 'ik' in het Oekraïens?",
+    "answer": "я"
+  },
+  {
+    "id": 5,
+    "question": "Hoe zeg je 'jij' in het Oekraïens?",
+    "answer": "ти"
+  },
+  {
+    "id": 6,
+    "question": "Hoe zeg je 'hij' in het Oekraïens?",
+    "answer": "він"
+  },
+  {
+    "id": 7,
+    "question": "Hoe zeg je 'zij (vrouwelijk)' in het Oekraïens?",
+    "answer": "вона"
+  },
+  {
+    "id": 8,
+    "question": "Hoe zeg je 'het' in het Oekraïens?",
+    "answer": "воно"
+  },
+  {
+    "id": 9,
+    "question": "Wat betekent 'Привіт' in het Nederlands?",
+    "answer": "Hallo"
+  },
+  {
+    "id": 10,
+    "question": "Wat betekent 'Добрий ранок' in het Nederlands?",
+    "answer": "Goedemorgen"
+  },
+  {
+    "id": 11,
+    "question": "Wat betekent 'Добрий день' in het Nederlands?",
+    "answer": "Goedemiddag"
+  },
+  {
+    "id": 12,
+    "question": "Wat betekent 'Добрий вечір' in het Nederlands?",
+    "answer": "Goede avond"
+  },
+  {
+    "id": 13,
+    "question": "Wat betekent 'Добраніч' in het Nederlands?",
+    "answer": "Goede nacht"
+  },
+  {
+    "id": 14,
+    "question": "Wat betekent 'Бувайте' in het Nederlands?",
+    "answer": "Tot ziens"
+  },
+  {
+    "id": 15,
+    "question": "Wat betekent 'До побачення' in het Nederlands?",
+    "answer": "Tot ziens"
+  },
+  {
+    "id": 16,
+    "question": "Wat betekent 'Будь ласка' in het Nederlands?",
+    "answer": "Alstublieft"
+  },
+  {
+    "id": 17,
+    "question": "Wat betekent 'Дякую' in het Nederlands?",
+    "answer": "Dank u"
+  },
+  {
+    "id": 18,
+    "question": "Wat betekent 'Вибачте' in het Nederlands?",
+    "answer": "Sorry"
+  },
+  {
+    "id": 19,
+    "question": "Wat betekent 'Немає проблем' in het Nederlands?",
+    "answer": "Geen probleem"
+  },
+  {
+    "id": 20,
+    "question": "Wat betekent 'Як справи?' in het Nederlands?",
+    "answer": "Hoe gaat het?"
+  },
+  {
+    "id": 21,
+    "question": "Wat betekent 'Добре' in het Nederlands?",
+    "answer": "Goed"
+  },
+  {
+    "id": 22,
+    "question": "Wat betekent 'Згода' in het Nederlands?",
+    "answer": "Akkoord"
+  },
+  {
+    "id": 23,
+    "question": "Wat betekent 'я' in het Nederlands?",
+    "answer": "ik"
+  },
+  {
+    "id": 24,
+    "question": "Wat betekent 'ти' in het Nederlands?",
+    "answer": "jij"
+  },
+  {
+    "id": 25,
+    "question": "Wat betekent 'він' in het Nederlands?",
+    "answer": "hij"
+  },
+  {
+    "id": 26,
+    "question": "Wat betekent 'вона' in het Nederlands?",
+    "answer": "zij (vrouwelijk)"
+  },
+  {
+    "id": 27,
+    "question": "Wat betekent 'воно' in het Nederlands?",
+    "answer": "het"
+  }
+]

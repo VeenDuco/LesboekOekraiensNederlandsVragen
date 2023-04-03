@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "quiz.html",
+    "href": "quiz.html",
+    "title": "Language Quiz",
+    "section": "",
+    "text": "source(\"read_questions.R\")\n\nWarning: package 'readxl' was built under R version 4.2.3\n\n\nWarning: package 'dplyr' was built under R version 4.2.3\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nWarning: package 'jsonlite' was built under R version 4.2.3\n\nquestions <- read_questions(\"vragenbank/questions.xlsx\")\nwrite_questions_json(questions, \"_site/questions.json\")\n\n\n\n\n\n\n\nControleer"
+  },
+  {
+    "objectID": "quiz_input.html",
+    "href": "quiz_input.html",
+    "title": "Language Quiz Input",
+    "section": "",
+    "text": "source(\"read_questions.R\")\n\nWarning: package 'readxl' was built under R version 4.2.3\n\n\nWarning: package 'dplyr' was built under R version 4.2.3\n\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\n\nWarning: package 'jsonlite' was built under R version 4.2.3\n\nquestions <- read_questions(\"vragenbank/questions_and_answers_ch2.xlsx\")\nwrite_questions_json(questions, \"_site/questions_and_answers_ch2.json\")\n\n\n\n\n Controleer"
+  }
+]
