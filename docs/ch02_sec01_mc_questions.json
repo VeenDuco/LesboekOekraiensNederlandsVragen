@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "question": "Wat betekent \"я\" in het Nederlands?",
+    "options": "ik; jij; hij; zij (vrouwelijk); het",
+    "correct_answer": "ik"
+  },
+  {
+    "id": 2,
+    "question": "Wat betekent \"ти\" in het Nederlands?",
+    "options": "ik; jij; hij; zij (vrouwelijk); het",
+    "correct_answer": "jij"
+  },
+  {
+    "id": 3,
+    "question": "Wat betekent \"він\" in het Nederlands?",
+    "options": "ik; jij; hij; zij (vrouwelijk); het",
+    "correct_answer": "hij"
+  },
+  {
+    "id": 4,
+    "question": "Wat betekent \"вона\" in het Nederlands?",
+    "options": "hij; zij (vrouwelijk); zij (mannelijk); jullie; wij",
+    "correct_answer": "zij (vrouwelijk)"
+  },
+  {
+    "id": 5,
+    "question": "Wat betekent \"воно\" in het Nederlands?",
+    "options": "het; wij; jullie; zij (mannelijk); zij (vrouwelijk)",
+    "correct_answer": "het"
+  },
+  {
+    "id": 6,
+    "question": "Wat betekent \"ik\" in het Oekraïens?",
+    "options": "я; ти; він; вона; воно",
+    "correct_answer": "я"
+  },
+  {
+    "id": 7,
+    "question": "Wat betekent \"jij\" in het Oekraïens?",
+    "options": "я; ти; він; вона; воно",
+    "correct_answer": "ти"
+  },
+  {
+    "id": 8,
+    "question": "Wat betekent \"hij\" in het Oekraïens?",
+    "options": "я; ти; він; вона; воно",
+    "correct_answer": "він"
+  },
+  {
+    "id": 9,
+    "question": "Wat betekent \"zij (vrouwelijk)\" in het Oekraïens?",
+    "options": "вона; вони; він; я; ти",
+    "correct_answer": "вона"
+  },
+  {
+    "id": 10,
+    "question": "Wat betekent \"het\" in het Oekraïens?",
+    "options": "воно; вона; вони; він; я",
+    "correct_answer": "воно"
+  },
+  {
+    "id": 11,
+    "question": "Wat betekent \"wij\" in het Oekraïens?",
+    "options": "ми; ви; вони; він; вона",
+    "correct_answer": "ми"
+  },
+  {
+    "id": 12,
+    "question": "Wat betekent \"jullie\" in het Oekraïens?",
+    "options": "ми; ви; вони; він; вона",
+    "correct_answer": "ви"
+  },
+  {
+    "id": 13,
+    "question": "Wat betekent \"zij (mannelijk)\" in het Oekraïens?",
+    "options": "ми; ви; вони; він; вона",
+    "correct_answer": "вони"
+  }
+]

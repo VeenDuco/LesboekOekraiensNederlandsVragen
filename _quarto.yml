@@ -12,6 +12,7 @@ website:
           - index.qmd
           - quiz.qmd
           - quiz_input.qmd
+          - ch02_mc.qmd
         
 format:
   html:

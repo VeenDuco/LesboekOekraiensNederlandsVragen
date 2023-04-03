@@ -3,6 +3,17 @@ title: "Multiple correct inputs"
 ---
 
 <!-- https://chat.openai.com/chat/446c03dc-ab44-4c7e-8d23-db3314ebe862 -->
+<!-- https://chat.openai.com/chat/355b010d-82da-4eb7-b10a-f2cf12d52da1 -->
+
+<!-- Geef mij de input voor een .xlsx bestand met 3 kolommen question, options, correct_answer gebaseerd op de onderstaande input. Stel in de eerste kolom een vraag, geef in de tweede kolom meerdere antwoord opties en selecteer in de derde kolom de juiste optie. -->
+
+<!-- Stel de vragen in de vorm "Wat betekent [Oekraïens woord] in het Nederlands?" -->
+<!-- Stel de vragen in de vorm "Wat betekend [nederlands woord] in het Oekraïens?" -->
+
+<!-- negeer van de onderstaande input de kolom uitspraak. -->
+
+<!-- Stel de vragen 2 kanten op. Daarmee bedoel ik "Wat betekend [nederlands woord] in het Oekraïens?" en "Wat betekent [Oekraïens woord] in het Nederlands?" -->
+
 
 ```{r}
 #| include: false

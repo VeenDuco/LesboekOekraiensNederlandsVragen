@@ -1,0 +1,238 @@
+---
+title: "Basis Oekraïense uitdrukkingen en woordenschat"
+---
+
+
+```{r}
+#| include: false
+#| 
+source("read_questions.R")
+# sec1
+questions <- read_questions("vragenbank/ch02_sec01_mc_questions.xlsx")
+write_questions_json(questions, "docs/ch02_sec01_mc_questions.json")
+# sec2
+questions <- read_questions("vragenbank/ch02_sec02_mc_questions.xlsx")
+write_questions_json(questions, "docs/ch02_sec02_mc_questions.json")
+# sec3
+questions <- read_questions("vragenbank/ch02_sec03_mc_questions.xlsx")
+write_questions_json(questions, "docs/ch02_sec03_mc_questions.json")
+```
+
+
+<!-- Section Header -->
+## Persoonlijke voornaamwoorden 
+
+<!-- Quiz 1 -->
+<div id="quiz1">
+  <p class="question"></p>
+  <div class="options"></div>
+  <button class="check-answer-button">Controleer</button>
+  <p class="result" style="display: none;"></p>
+</div>
+
+<!-- Section Header -->
+## Begroetingen en afscheid nemen
+
+<!-- Quiz 2 -->
+<div id="quiz2">
+  <p class="question"></p>
+  <div class="options"></div>
+  <button class="check-answer-button">Controleer</button>
+  <p class="result" style="display: none;"></p>
+</div>
+
+<!-- Section Header -->
+## Beleefdheidsuitdrukkingen en basiszinnen
+
+<!-- Quiz 3 -->
+<div id="quiz3">
+  <p class="question"></p>
+  <div class="options"></div>
+  <button class="check-answer-button">Controleer</button>
+  <p class="result" style="display: none;"></p>
+</div>
+
+
+
+
+
+
+<script>
+function createQuiz(quizID, jsonURL) {
+  const quizElement = document.getElementById(quizID);
+
+  const questionElement = quizElement.getElementsByClassName('question')[0];
+  const optionsElement = quizElement.getElementsByClassName('options')[0];
+  const resultElement = quizElement.getElementsByClassName('result')[0];
+  const checkAnswerButton = quizElement.getElementsByClassName('check-answer-button')[0];
+
+  let quizData = [];
+  let currentOptions = [];
+
+  fetch(jsonURL)
+    .then((response) => response.json())
+    .then((data) => {
+      quizData = data;
+      loadQuestion();
+    });
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  function loadQuestion() {
+    const randomIndex = Math.floor(Math.random() * quizData.length);
+    const question = quizData[randomIndex].question;
+    const options = quizData[randomIndex].options.split('; ');
+    shuffleArray(options);
+    currentOptions = options;
+
+    questionElement.textContent = question;
+
+    optionsElement.innerHTML = '';
+
+    options.forEach((option, index) => {
+      const radioButton = document.createElement('input');
+      radioButton.type = 'radio';
+      radioButton.name = 'option';
+      radioButton.id = `option${index}`;
+      radioButton.value = option;
+
+      const label = document.createElement('label');
+      label.htmlFor = `option${index}`;
+      label.textContent = option;
+
+      optionsElement.appendChild(radioButton);
+      optionsElement.appendChild(label);
+      optionsElement.appendChild(document.createElement('br'));
+    });
+
+    resultElement.style.display = 'none';
+  }
+
+  function checkAnswer() {
+    const options = quizElement.querySelectorAll('input[name="option"]');
+    let selectedOption = null;
+    options.forEach((option) => {
+      if (option.checked) {
+        selectedOption = option.value;
+      }
+    });
+
+    const currentQuestion = questionElement.textContent;
+    const correctAnswer = quizData.find(
+      (q) => q.question === currentQuestion
+    ).correct_answer;
+
+    if (
+      selectedOption &&
+      selectedOption.toLowerCase() === correctAnswer.toLowerCase()
+    ) {
+      resultElement.textContent = 'Correct!';
+      resultElement.style.color = 'green';
+    } else {
+      resultElement.textContent =
+        'Niet correct, het juiste antwoord is ' + correctAnswer + '.';
+      resultElement.style.color = 'red';
+    }
+    resultElement.style.display = 'block';
+    setTimeout(loadQuestion, 2000);
+  }
+
+  checkAnswerButton.onclick = checkAnswer;
+}
+
+
+// Initialize quizzes with different JSON files and unique identifiers
+createQuiz('quiz1', 'ch02_sec01_mc_questions.json');
+createQuiz('quiz2', 'ch02_sec02_mc_questions.json');
+createQuiz('quiz3', 'ch02_sec02_mc_questions.json');
+</script>
+
+
+
+
+## Alle vragen - Typen
+
+
+```{r}
+#| include: false
+#| 
+library(readxl)
+library(writexl)
+library(dplyr)
+library(jsonlite)
+
+# List of input .xlsx files
+input_files <- list.files(path = "./vragenbank", pattern = "^ch02_.*\\.xlsx$",
+                          include.dirs = TRUE, full.names = TRUE)
+
+# Read and combine data from multiple .xlsx files
+combined_data <- lapply(input_files, function(file) {
+  data <- read_excel(file)
+  data <- data %>% select(question, correct_answer)
+}) %>% bind_rows()
+
+# Rename the correct_answer column to answer
+combined_data <- combined_data %>% rename(answer = correct_answer)
+
+# Write the combined data to a new .xlsx file to check easily
+write_xlsx(combined_data, "vragenbank/ch02_combined_questions_answers.xlsx")
+# Write the combined data to a new .json file
+write_questions_json <- function(questions, file_path) {
+  questions_json <- toJSON(questions, pretty = TRUE)
+  write(questions_json, file_path)
+}
+
+write_questions_json(combined_data, "docs/ch02_combined_questions_answers.json")
+```
+
+
+<div>
+  <p id="question"></p>
+  <input type="text" id="answer-input">
+  <button onclick="checkAnswer()">Controleer</button>
+  <p id="result" style="display: none;"></p>
+</div>
+
+<script>
+  let quizData = [];
+
+  function loadQuizData() {
+    fetch('ch02_combined_questions_answers.json')
+      .then(response => response.json())
+      .then(data => {
+        quizData = data;
+        loadQuestion();
+      });
+  }
+
+  function loadQuestion() {
+    const randomIndex = Math.floor(Math.random() * quizData.length);
+    const question = quizData[randomIndex].question;
+    const answer = quizData[randomIndex].answer;
+    document.getElementById('question').textContent = question;
+    document.getElementById('answer-input').value = '';
+    document.getElementById('result').style.display = 'none';
+  }
+
+  function checkAnswer() {
+    const userInput = document.getElementById("answer-input").value;
+    const currentQuestion = document.getElementById('question').textContent;
+    const correctAnswer = quizData.find(q => q.question === currentQuestion).answer;
+    if (userInput.toLowerCase() === correctAnswer.toLowerCase()) {
+      document.getElementById('result').textContent = 'Correct!';
+      document.getElementById('result').style.color = 'green';
+    } else {
+      document.getElementById('result').textContent = 'Niet correct, het juiste antwoord is ' + correctAnswer + '.';
+      document.getElementById('result').style.color = 'red';
+    }
+    document.getElementById('result').style.display = 'block';
+    setTimeout(loadQuestion, 2000);
+  }
+
+  loadQuizData();
+</script>

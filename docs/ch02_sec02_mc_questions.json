@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "question": "Wat betekent \"Hallo\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "Привіт"
+  },
+  {
+    "id": 2,
+    "question": "Wat betekent \"Goedemorgen\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "Добрий ранок"
+  },
+  {
+    "id": 3,
+    "question": "Wat betekent \"Goedemiddag\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "Добрий день"
+  },
+  {
+    "id": 4,
+    "question": "Wat betekent \"Goede avond\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "Добрий вечір"
+  },
+  {
+    "id": 5,
+    "question": "Wat betekent \"Goede nacht\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "Добраніч"
+  },
+  {
+    "id": 6,
+    "question": "Wat betekent \"Tot ziens\" in het Oekraïens?",
+    "options": "Привіт; Добрий ранок; Добрий день; Добрий вечір; Добраніч; Бувайте; До побачення",
+    "correct_answer": "До побачення"
+  },
+  {
+    "id": 7,
+    "question": "Wat betekent \"Привіт\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Hallo"
+  },
+  {
+    "id": 8,
+    "question": "Wat betekent \"Добрий ранок\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Goedemorgen"
+  },
+  {
+    "id": 9,
+    "question": "Wat betekent \"Добрий день\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Goedemiddag"
+  },
+  {
+    "id": 10,
+    "question": "Wat betekent \"Добрий вечір\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Goede avond"
+  },
+  {
+    "id": 11,
+    "question": "Wat betekent \"Добраніч\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Goede nacht"
+  },
+  {
+    "id": 12,
+    "question": "Wat betekent \"Бувайте\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Tot ziens"
+  },
+  {
+    "id": 13,
+    "question": "Wat betekent \"До побачення\" in het Nederlands?",
+    "options": "Hallo; Goedemorgen; Goedemiddag; Goede avond; Goede nacht; Tot ziens",
+    "correct_answer": "Tot ziens"
+  }
+]

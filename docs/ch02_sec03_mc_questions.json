@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "question": "Wat betekent \"Будь ласка\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Alstublieft"
+  },
+  {
+    "id": 2,
+    "question": "Wat betekent \"Дякую\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Dank u"
+  },
+  {
+    "id": 3,
+    "question": "Wat betekent \"Вибачте\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Sorry"
+  },
+  {
+    "id": 4,
+    "question": "Wat betekent \"Немає проблем\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Geen probleem"
+  },
+  {
+    "id": 5,
+    "question": "Wat betekent \"Як справи?\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Hoe gaat het?"
+  },
+  {
+    "id": 6,
+    "question": "Wat betekent \"Добре\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Goed"
+  },
+  {
+    "id": 7,
+    "question": "Wat betekent \"Згода\" in het Nederlands?",
+    "options": "Alstublieft; Dank u; Sorry; Geen probleem; Hoe gaat het?; Goed; Akkoord",
+    "correct_answer": "Akkoord"
+  },
+  {
+    "id": 8,
+    "question": "Wat betekent \"Alstublieft\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Будь ласка"
+  },
+  {
+    "id": 9,
+    "question": "Wat betekent \"Dank u\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Дякую"
+  },
+  {
+    "id": 10,
+    "question": "Wat betekent \"Sorry\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Вибачте"
+  },
+  {
+    "id": 11,
+    "question": "Wat betekent \"Geen probleem\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Немає проблем"
+  },
+  {
+    "id": 12,
+    "question": "Wat betekent \"Hoe gaat het?\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Як справи?"
+  },
+  {
+    "id": 13,
+    "question": "Wat betekent \"Goed\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Добре"
+  },
+  {
+    "id": 14,
+    "question": "Wat betekent \"Akkoord\" in het Oekraïens?",
+    "options": "Будь ласка; Дякую; Вибачте; Немає проблем; Як справи?; Добре; Згода",
+    "correct_answer": "Згода"
+  }
+]
