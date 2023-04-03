@@ -1,9 +1,11 @@
 ---
-title: "Language Quiz"
+title: "Multiple Choice Quiz"
 ---
 
 
 ```{r}
+#| include: false
+#| 
 source("read_questions.R")
 questions <- read_questions("vragenbank/questions.xlsx")
 write_questions_json(questions, "docs/questions.json")

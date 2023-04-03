@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "Hoe zeg je 'hallo' in het Oekraïens?",
+    "answer": "Привіт"
+  },
+  {
+    "id": 2,
+    "question": "Wat betekent 'Добрий ранок' in het Nederlands?",
+    "answer": "Goedemorgen; goede morgen"
+  },
+  {
+    "id": 3,
+    "question": "Wat betekent 'Добрий день' in het Nederlands?",
+    "answer": "Goedemiddag; goede middag"
+  },
+  {
+    "id": 4,
+    "question": "Wat betekent 'Добрий вечір' in het Nederlands?",
+    "answer": "Goede avond; goedenavond"
+  },
+  {
+    "id": 5,
+    "question": "Wat betekent 'Добраніч' in het Nederlands?",
+    "answer": "Goede nacht; goedenacht"
+  },
+  {
+    "id": 6,
+    "question": "Wat betekent 'Бувайте' in het Nederlands?",
+    "answer": "Tot ziens; doei"
+  }
+]

@@ -1,4 +1,63 @@
 ---
-title: "Language Quiz"
+title: "Multiple correct inputs"
 ---
 
+<!-- https://chat.openai.com/chat/446c03dc-ab44-4c7e-8d23-db3314ebe862 -->
+
+```{r}
+#| include: false
+#| 
+source("read_questions.R")
+questions <- read_questions("vragenbank/questions_and_answers_ch00.xlsx")
+write_questions_json(questions, "docs/questions_and_answers_ch00.json")
+```
+
+<div>
+  <p id="question"></p>
+  <input type="text" id="answer-input">
+  <button onclick="checkAnswer()">Controleer</button>
+  <p id="result" style="display: none;"></p>
+</div>
+
+<script>
+  let quizData = [];
+
+  function loadQuizData() {
+    fetch('questions_and_answers_ch00.json')
+      .then(response => response.json())
+      .then(data => {
+        quizData = data;
+        loadQuestion();
+      });
+  }
+
+  function loadQuestion() {
+    const randomIndex = Math.floor(Math.random() * quizData.length);
+    const question = quizData[randomIndex].question;
+    document.getElementById('question').textContent = question;
+    document.getElementById('answer-input').value = '';
+    document.getElementById('result').style.display = 'none';
+  }
+
+  function checkAnswer() {
+    const userInput = document.getElementById("answer-input").value;
+    const currentQuestion = document.getElementById('question').textContent;
+    const correctAnswers = quizData.find(q => q.question === currentQuestion).answer.split(';');
+
+    const isCorrect = correctAnswers.some(answer => {
+      return userInput.toLowerCase().trim() === answer.toLowerCase().trim();
+    });
+
+    if (isCorrect) {
+      document.getElementById('result').textContent = 'Correct!';
+      document.getElementById('result').style.color = 'green';
+    } else {
+      document.getElementById('result').textContent = 'Niet correct, het juiste antwoord is ' + correctAnswers.join(', ') + '.';
+      document.getElementById('result').style.color = 'red';
+    }
+    document.getElementById('result').style.display = 'block';
+    setTimeout(loadQuestion, 2000);
+  }
+
+  loadQuizData();
+</script>
