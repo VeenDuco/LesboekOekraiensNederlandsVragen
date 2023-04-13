@@ -16,6 +16,12 @@ write_questions_json(questions, "docs/ch02_sec02_mc_questions.json")
 # sec3
 questions <- read_questions("vragenbank/ch02_sec03_mc_questions.xlsx")
 write_questions_json(questions, "docs/ch02_sec03_mc_questions.json")
+# sec4
+questions <- read_questions("vragenbank/ch02_sec04_mc_questions.xlsx")
+write_questions_json(questions, "docs/ch02_sec04_mc_questions.json")
+# sec5
+questions <- read_questions("vragenbank/ch02_sec05_mc_questions.xlsx")
+write_questions_json(questions, "docs/ch02_sec05_mc_questions.json")
 ```
 
 
@@ -52,8 +58,28 @@ write_questions_json(questions, "docs/ch02_sec03_mc_questions.json")
   <p class="result" style="display: none;"></p>
 </div>
 
+<!-- Section Header -->
+## Persoonlijke informatie
+
+<!-- Quiz 4 -->
+<div id="quiz4">
+  <p class="question"></p>
+  <div class="options"></div>
+  <button class="check-answer-button">Controleer</button>
+  <p class="result" style="display: none;"></p>
+</div>
 
 
+<!-- Section Header -->
+## Familie en relaties
+
+<!-- Quiz 5 -->
+<div id="quiz5">
+  <p class="question"></p>
+  <div class="options"></div>
+  <button class="check-answer-button">Controleer</button>
+  <p class="result" style="display: none;"></p>
+</div>
 
 
 
@@ -149,7 +175,9 @@ function createQuiz(quizID, jsonURL) {
 // Initialize quizzes with different JSON files and unique identifiers
 createQuiz('quiz1', 'ch02_sec01_mc_questions.json');
 createQuiz('quiz2', 'ch02_sec02_mc_questions.json');
-createQuiz('quiz3', 'ch02_sec02_mc_questions.json');
+createQuiz('quiz3', 'ch02_sec03_mc_questions.json');
+createQuiz('quiz4', 'ch02_sec04_mc_questions.json');
+createQuiz('quiz5', 'ch02_sec05_mc_questions.json');
 </script>
 
 

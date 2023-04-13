@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "question": "Wat betekent \"Naam\" in het Oekraïens?",
+    "options": "Ім'я; Прізвище; Вік; Адреса; Місто; Країна; Рідна мова; Зайнятість",
+    "correct_answer": "Ім'я"
+  },
+  {
+    "id": 2,
+    "question": "Wat betekent \"Achternaam\" in het Oekraïens?",
+    "options": "Ім'я; Прізвище; Вік; Адреса; Місто; Країна; Рідна мова; Зайнятість",
+    "correct_answer": "Прізвище"
+  },
+  {
+    "id": 3,
+    "question": "Wat betekent \"Leeftijd\" in het Oekraïens?",
+    "options": "Ім'я; Прізвище; Вік; Адреса; Місто; Країна; Рідна мова; Зайнятість",
+    "correct_answer": "Вік"
+  },
+  {
+    "id": 4,
+    "question": "Wat betekent \"Adres\" in het Oekraïens?",
+    "options": "Ім'я; Прізвище; Вік; Адреса; Місто; Країна; Рідна мова; Зайнятість",
+    "correct_answer": "Адреса"
+  },
+  {
+    "id": 5,
+    "question": "Wat betekent \"Stad\" in het Oekraïens?",
+    "options": "Ім'я; Прізвище; Вік; Адреса; Місто; Країна; Рідна мова; Зайнятість",
+    "correct_answer": "Місто"
+  },
+  {
+    "id": 6,
+    "question": "Wat betekent \"Land\" in het Oekraïens?",
+    "options": "Ім'я; Прізвище; Вік; Адреса; Місто; Країна; Рідна мова; Зайнятість",
+    "correct_answer": "Країна"
+  },
+  {
+    "id": 7,
+    "question": "Wat betekent \"Moedertaal\" in het Oekraïens?",
+    "options": "Ім'я; Прізвище; Вік; Адреса; Місто; Країна; Рідна мова; Зайнятість",
+    "correct_answer": "Рідна мова"
+  },
+  {
+    "id": 8,
+    "question": "Wat betekent \"Beroep\" in het Oekraïens?",
+    "options": "Ім'я; Прізвище; Вік; Адреса; Місто; Країна; Рідна мова; Зайнятість",
+    "correct_answer": "Зайнятість"
+  },
+  {
+    "id": 9,
+    "question": "Wat betekent \"Ім'я\" in het Nederlands?",
+    "options": "Naam; Achternaam; Leeftijd; Adres; Stad; Land; Moedertaal; Beroep",
+    "correct_answer": "Naam"
+  },
+  {
+    "id": 10,
+    "question": "Wat betekent \"Прізвище\" in het Nederlands?",
+    "options": "Naam; Achternaam; Leeftijd; Adres; Stad; Land; Moedertaal; Beroep",
+    "correct_answer": "Achternaam"
+  },
+  {
+    "id": 11,
+    "question": "Wat betekent \"Вік\" in het Nederlands?",
+    "options": "Naam; Achternaam; Leeftijd; Adres; Stad; Land; Moedertaal; Beroep",
+    "correct_answer": "Leeftijd"
+  },
+  {
+    "id": 12,
+    "question": "Wat betekent \"Адреса\" in het Nederlands?",
+    "options": "Naam; Achternaam; Leeftijd; Adres; Stad; Land; Moedertaal; Beroep",
+    "correct_answer": "Adres"
+  },
+  {
+    "id": 13,
+    "question": "Wat betekent \"Місто\" in het Nederlands?",
+    "options": "Naam; Achternaam; Leeftijd; Adres; Stad; Land; Moedertaal; Beroep",
+    "correct_answer": "Stad"
+  },
+  {
+    "id": 14,
+    "question": "Wat betekent \"Країна\" in het Nederlands?",
+    "options": "Naam; Achternaam; Leeftijd; Adres; Stad; Land; Moedertaal; Beroep",
+    "correct_answer": "Land"
+  },
+  {
+    "id": 15,
+    "question": "Wat betekent \"Рідна мова\" in het Nederlands?",
+    "options": "Naam; Achternaam; Leeftijd; Adres; Stad; Land; Moedertaal; Beroep",
+    "correct_answer": "Moedertaal"
+  },
+  {
+    "id": 16,
+    "question": "Wat betekent \"Зайнятість\" in het Nederlands?",
+    "options": "Naam; Achternaam; Leeftijd; Adres; Stad; Land; Moedertaal; Beroep",
+    "correct_answer": "Beroep"
+  }
+]

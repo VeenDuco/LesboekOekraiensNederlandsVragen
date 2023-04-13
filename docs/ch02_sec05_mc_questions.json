@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "question": "Wat betekent \"сім'я\" in het Nederlands?",
+    "options": "huis; auto; familie; eten",
+    "correct_answer": "familie"
+  },
+  {
+    "id": 2,
+    "question": "Wat betekent \"батько\" in het Nederlands?",
+    "options": "moeder; vader; broer; zus",
+    "correct_answer": "vader"
+  },
+  {
+    "id": 3,
+    "question": "Wat betekent \"мати\" in het Nederlands?",
+    "options": "moeder; vader; broer; zus",
+    "correct_answer": "moeder"
+  },
+  {
+    "id": 4,
+    "question": "Wat betekent \"брат\" in het Nederlands?",
+    "options": "broer; zus; tante; oom",
+    "correct_answer": "broer"
+  },
+  {
+    "id": 5,
+    "question": "Wat betekent \"сестра\" in het Nederlands?",
+    "options": "broer; zus; tante; oom",
+    "correct_answer": "zus"
+  },
+  {
+    "id": 6,
+    "question": "Wat betekent \"дідусь\" in het Nederlands?",
+    "options": "opa; oma; neef; nicht",
+    "correct_answer": "opa"
+  },
+  {
+    "id": 7,
+    "question": "Wat betekent \"бабуся\" in het Nederlands?",
+    "options": "opa; oma; neef; nicht",
+    "correct_answer": "oma"
+  },
+  {
+    "id": 8,
+    "question": "Wat betekent \"син\" in het Nederlands?",
+    "options": "zoon; dochter; vader; moeder",
+    "correct_answer": "zoon"
+  },
+  {
+    "id": 9,
+    "question": "Wat betekent \"дочка\" in het Nederlands?",
+    "options": "zoon; dochter; vader; moeder",
+    "correct_answer": "dochter"
+  },
+  {
+    "id": 10,
+    "question": "Wat betekent \"дядько\" in het Nederlands?",
+    "options": "oom; tante; broer; zus",
+    "correct_answer": "oom"
+  },
+  {
+    "id": 11,
+    "question": "Wat betekent \"тітка\" in het Nederlands?",
+    "options": "oom; tante; broer; zus",
+    "correct_answer": "tante"
+  },
+  {
+    "id": 12,
+    "question": "Wat betekent \"племінник\" in het Nederlands?",
+    "options": "neef; nicht; opa; oma",
+    "correct_answer": "neef"
+  },
+  {
+    "id": 13,
+    "question": "Wat betekent \"племінниця\" in het Nederlands?",
+    "options": "neef; nicht; opa; oma",
+    "correct_answer": "nicht"
+  },
+  {
+    "id": 14,
+    "question": "Wat betekent \"чоловік\" in het Nederlands?",
+    "options": "echtgenote; echtgenoot; vader; moeder",
+    "correct_answer": "echtgenoot"
+  },
+  {
+    "id": 15,
+    "question": "Wat betekent \"дружина\" in het Nederlands?",
+    "options": "echtgenote; echtgenoot; broer; zus",
+    "correct_answer": "echtgenote"
+  },
+  {
+    "id": 16,
+    "question": "Wat betekent \"familie\" in het Oekraïens?",
+    "options": "батько; сім'я; сестра",
+    "correct_answer": "сім'я"
+  },
+  {
+    "id": 17,
+    "question": "Wat betekent \"vader\" in het Oekraïens?",
+    "options": "син; бабуся; батько",
+    "correct_answer": "батько"
+  },
+  {
+    "id": 18,
+    "question": "Wat betekent \"moeder\" in het Oekraïens?",
+    "options": "дочка; тітка; мати",
+    "correct_answer": "мати"
+  },
+  {
+    "id": 19,
+    "question": "Wat betekent \"broer\" in het Oekraïens?",
+    "options": "дідусь; брат; дядько",
+    "correct_answer": "брат"
+  },
+  {
+    "id": 20,
+    "question": "Wat betekent \"zus\" in het Oekraïens?",
+    "options": "сестра; чоловік; племінник",
+    "correct_answer": "сестра"
+  },
+  {
+    "id": 21,
+    "question": "Wat betekent \"opa\" in het Oekraïens?",
+    "options": "бабуся; син; дідусь",
+    "correct_answer": "дідусь"
+  },
+  {
+    "id": 22,
+    "question": "Wat betekent \"oma\" in het Oekraïens?",
+    "options": "брат; бабуся; племінниця",
+    "correct_answer": "бабуся"
+  },
+  {
+    "id": 23,
+    "question": "Wat betekent \"zoon\" in het Oekraïens?",
+    "options": "син; дочка; тітка",
+    "correct_answer": "син"
+  },
+  {
+    "id": 24,
+    "question": "Wat betekent \"dochter\" in het Oekraïens?",
+    "options": "дочка; сестра; cholovik",
+    "correct_answer": "дочка"
+  },
+  {
+    "id": 25,
+    "question": "Wat betekent \"oom\" in het Oekraïens?",
+    "options": "дядько; племінниця; батько",
+    "correct_answer": "дядько"
+  },
+  {
+    "id": 26,
+    "question": "Wat betekent \"tante\" in het Oekraïens?",
+    "options": "племінниця; тітка; бабуся",
+    "correct_answer": "тітка"
+  },
+  {
+    "id": 27,
+    "question": "Wat betekent \"neef\" in het Oekraïens?",
+    "options": "сестра; племінник; брат",
+    "correct_answer": "племінник"
+  },
+  {
+    "id": 28,
+    "question": "Wat betekent \"nicht\" in het Oekraïens?",
+    "options": "pleminnyk; немає проблем; племінниця",
+    "correct_answer": "племінниця"
+  },
+  {
+    "id": 29,
+    "question": "Wat betekent \"echtgenoot\" in het Oekraïens?",
+    "options": "чоловік; дочка; дружина",
+    "correct_answer": "чоловік"
+  },
+  {
+    "id": 30,
+    "question": "Wat betekent \"echtgenote\" in het Oekraïens?",
+    "options": "дружина; брат; сестра",
+    "correct_answer": "дружина"
+  }
+]
